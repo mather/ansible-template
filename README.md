@@ -31,10 +31,24 @@ Based on [Ansible playbook best practice](http://docs.ansible.com/playbooks_best
 │           └── main.yml
 ├── Vagrantfile          # Vagrant settings
 ├── vagrant_hosts        # inventory file for vagrant provisioning
-└── vagrant_playbook.yml # playbook for vagrant provisioning
+└── vagrant_playbook.yml # sample playbook for vagrant provisioning
 ```
 
+### Run with Vagrant
 
+*This Vagrantfile is targeted for Debian 8.1(Jessie) for now*
+
+Start VM with
+
+```
+$ vagrant up
+```
+
+If you modified `vagrant_playbook.yml`, re-run provisioning with
+
+```
+$ vagrant provision
+```
 
 ### Scripts for ansible development
 
