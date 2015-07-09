@@ -1,0 +1,15 @@
+### https://raw.github.com/github/gitignore/2e7537454d3a4a129fbf3d8f0fbcd349583d23d0/Global/Vagrant.gitignore
+
+.vagrant/
+
+
+### https://raw.github.com/github/gitignore/2e7537454d3a4a129fbf3d8f0fbcd349583d23d0/Global/Vim.gitignore
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+
