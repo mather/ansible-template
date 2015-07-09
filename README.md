@@ -3,6 +3,12 @@ Ansible project template with Vagrant
 
 Based on [Ansible playbook best practice](http://docs.ansible.com/playbooks_best_practices.html)
 
+### Requirements
+
+- [VirtualBox](https://www.virtualbox.org/)
+- [Vagrant](https://www.vagrantup.com/)
+- [Ansible](http://www.ansible.com/)
+
 ### Directory Structure
 
 ```
@@ -36,7 +42,9 @@ Based on [Ansible playbook best practice](http://docs.ansible.com/playbooks_best
 
 ### Run with Vagrant
 
-*This Vagrantfile is targeted for Debian 8.1(Jessie) for now*
+*This Vagrantfile is targeted for Debian 8.1(Jessie)*
+
+Overwrite `Vagrantfile` to select target OS.
 
 Start VM with
 
