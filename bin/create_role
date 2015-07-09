@@ -5,12 +5,14 @@
 ## cf. http://docs.ansible.com/playbooks_best_practices.html
 ##
 
+set -e
+
 if [ -z $1 ]; then
   echo "Usage: $0 <role_name>"
   exit 1
 fi
 
-pushd $(dirname $0) > /dev/null
+pushd $(dirname $0)/../ > /dev/null
 
 if [ -d roles/$1 ]; then
   echo "ERROR: roles/$1 already exists"
