@@ -1,0 +1,35 @@
+#!/bin/sh
+
+##
+## Create role directory based on Ansible playbook best practice.
+## cf. http://docs.ansible.com/playbooks_best_practices.html
+##
+
+if [ -z $1 ]; then
+  echo "Usage: $0 <role_name>"
+  exit 1
+fi
+
+pushd $(dirname $0) > /dev/null
+
+if [ -d roles/$1 ]; then
+  echo "ERROR: roles/$1 already exists"
+  exit 1
+fi
+
+mkdir -p roles/$1 && pushd roles/$1 > /dev/null
+mkdir defaults tasks handlers templates files vars meta
+
+for d in defaults handlers meta tasks vars
+do
+  echo "---" > $d/main.yml
+done
+
+touch templates/.gitkeep
+touch files/.gitkeep
+
+popd -n > /dev/null
+
+echo "Directories for role $1 created."
+
+popd -n > /dev/null
